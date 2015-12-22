@@ -66,14 +66,11 @@
     loginButton.hidden = YES;
     NSLog(@"Tabbar view controller");
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    appDelegate.firstViewController = [[FirstViewController alloc] initWithNibName:nil bundle:NULL];
     appDelegate.secondViewController = [[SecondViewController alloc] initWithNibName:nil bundle:NULL];
-    appDelegate.testViewController = [[TestViewController alloc] initWithNibName:nil bundle:NULL];
     appDelegate.firstSubViewController = [[ FirstSubViewController alloc] initWithNibName:nil bundle:NULL];
     [appDelegate.secondViewController setDelegate:appDelegate.firstSubViewController];
     appDelegate.tabBarController = [[UITabBarController alloc] init];
-//    appDelegate.tabBarController.viewControllers = @[ appDelegate.testViewController];
-//    appDelegate.tabBarController.viewControllers = @[ appDelegate.firstSubViewController,  appDelegate.secondViewController];
+
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:appDelegate.firstSubViewController];
     appDelegate.tabBarController.viewControllers = @[ navController, appDelegate.secondViewController];
     [appDelegate.window setRootViewController:appDelegate.tabBarController];

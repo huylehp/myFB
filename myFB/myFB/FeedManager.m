@@ -2,7 +2,7 @@
 //  FeedManager.m
 //  myFB
 //
-//  Created by AnLab Mac on 11/17/15.
+//  Created by AnLab Mac on 12/22/15.
 //  Copyright © 2015 TeengLiu. All rights reserved.
 //
 
@@ -55,7 +55,7 @@
 }
 
 - (void)takingArrayOfFeedWithSuccess:(void (^)(NSMutableArray * result))   success
-                                  failure:(void (^)(NSError * error))      failure
+                             failure:(void (^)(NSError * error))      failure
 {
     NSLog(@"Start take");
     if ([FBSDKAccessToken currentAccessToken]) {
@@ -116,7 +116,7 @@
                 NSLog(@"tokenAccess error");
             } else {
                 arrayOfFeeds = [NSMutableArray array];
-//                NSLog(@"result: %@", result);
+                //                NSLog(@"result: %@", result);
                 for (NSUInteger i = 0; i < [result[@"data"] count]; i++) {
                     Feed * myFeed = [[Feed alloc] init];
                     [myFeed setMessage:result[@"data"][i][@"message"]
@@ -216,27 +216,27 @@
              }
              //add recieved data to array
              [feeds addObjectsFromArray:result[@"data"]];
-              //then get parameters of link for the next page of data
-              NSDictionary *paramsOfNextPage = [FBSDKUtility dictionaryWithQueryString:result[@"paging"][@"next"]];
-              if (paramsOfNextPage.allKeys.count > 0){
-                  [self p_requestFromPath:path
-                               parameters:paramsOfNextPage
-                                  storage:feeds
-                                   success:success
-                                  failure:failure];
-                  //just exit out of the method body if next link was found
-                  return;
-              }
-              if (success){
-                  success([feeds copy]);
-              }
-    }];
-             //do not forget to run connection
-             [connection start];
+             //then get parameters of link for the next page of data
+             NSDictionary *paramsOfNextPage = [FBSDKUtility dictionaryWithQueryString:result[@"paging"][@"next"]];
+             if (paramsOfNextPage.allKeys.count > 0){
+                 [self p_requestFromPath:path
+                              parameters:paramsOfNextPage
+                                 storage:feeds
+                                 success:success
+                                 failure:failure];
+                 //just exit out of the method body if next link was found
+                 return;
+             }
+             if (success){
+                 success([feeds copy]);
+             }
+         }];
+    //do not forget to run connection
+    [connection start];
 }
 - (void) addMoreFeedFromPath:(NSString *)path WithPagingString:(NSString *)paging storage:(NSMutableArray *)feedArrays success:(void (^) (NSArray *))success failure:(void (^)(NSError *))failure{
     NSDictionary *paramOfNextPage = [FBSDKUtility dictionaryWithQueryString:paging];
-//    NSLog(@"%@", paramOfNextPage);
+    //    NSLog(@"%@", paramOfNextPage);
     FBSDKGraphRequest *fbRequest = [[FBSDKGraphRequest alloc] initWithGraphPath:path parameters:paramOfNextPage HTTPMethod:nil];
     FBSDKGraphRequestConnection *connection = [FBSDKGraphRequestConnection new];
     [connection addRequest:fbRequest completionHandler:^(FBSDKGraphRequestConnection *connection, id result, NSError *error) {
@@ -247,7 +247,7 @@
             return;
         }
         [feedArrays addObjectsFromArray:result[@"data"]];
-//        NSLog(@"result : %@", result);
+        //        NSLog(@"result : %@", result);
         
         if (success) {
             success([feedArrays copy]);
@@ -257,7 +257,7 @@
 }
 - (void)pagingMoreNewFeedWithPagingString:(NSString *)paging withCompletionSuccess:(void (^) (NSArray *))success failure:(void (^)(NSError *))failure{
     NSDictionary *paramOfNextPage = [FBSDKUtility dictionaryWithQueryString:paging];
-//    NSLog(@"paging: %@", paging);
+    //    NSLog(@"paging: %@", paging);
     NSLog(@"%@", paramOfNextPage);
     NSLog(@"paging_token:%@", paramOfNextPage[@"__paging_token"]);
     NSLog(@"until:%@", paramOfNextPage[@"until"]);
@@ -300,9 +300,9 @@
                 failure(error);
             }
         }
-
+        
     }];
-
+    
 }
 - (void) downloadFeedImagesAtIndexPath:(NSIndexPath *) indexPath
 {
@@ -320,3 +320,4 @@
 
 #pragma mark - Interface Source
 @end
+

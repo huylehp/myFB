@@ -9,16 +9,12 @@
 #import <UIKit/UIKit.h>
 #import <CoreData/CoreData.h>
 #import "LoginViewController.h"
-#import "FirstViewController.h"
 #import "SecondViewController.h"
-#import "TestViewController.h"
 #import "FirstSubViewController.h"
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UITabBarController *tabBarController;
-@property (strong, nonatomic) FirstViewController *firstViewController;
 @property (strong, nonatomic) SecondViewController *secondViewController;
-@property (strong, nonatomic) TestViewController *testViewController;
 @property (strong, nonatomic) FirstSubViewController *firstSubViewController;
 @property (strong, nonatomic) UIWindow *window;
 

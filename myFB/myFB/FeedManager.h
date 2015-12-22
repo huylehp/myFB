@@ -2,7 +2,7 @@
 //  FeedManager.h
 //  myFB
 //
-//  Created by AnLab Mac on 11/17/15.
+//  Created by AnLab Mac on 12/22/15.
 //  Copyright © 2015 TeengLiu. All rights reserved.
 //
 
@@ -18,7 +18,7 @@
 @interface FeedManager : NSObject
 {
     NSMutableDictionary *shareFeed;
-
+    
 }
 @property (nonatomic, weak) id <FeedDelegate> delegate;
 @property (nonatomic, retain) NSMutableDictionary * shareFeed;
@@ -31,7 +31,7 @@
 + (id)sharedManager;
 
 - (void)takingArrayOfFeedWithSuccess:(void (^)(NSMutableArray * result))   success
-                                  failure:(void (^)(NSError * error))           failure;
+                             failure:(void (^)(NSError * error))           failure;
 - (void)createFeedManagerWithSuccess:(void (^)(NSMutableArray *feedArrays, Paging * paging))success failure:(void (^)(NSError *error)) failure;
 - (NSUInteger) sizeOfFeeds;
 - (void) addFeed: (Feed *)feed;
@@ -44,4 +44,3 @@
 - (void) addMoreFeedFromPath:(NSString *)path WithPagingString:(NSString *)paging storage:(NSMutableArray *)feedArrays success:(void (^) (NSArray *))success failure:(void (^)(NSError *))failure;
 - (void)pagingMoreNewFeedWithPagingString:(NSString *)paging withCompletionSuccess:(void (^) (NSArray *))success failure:(void (^)(NSError *))failure;
 @end
-

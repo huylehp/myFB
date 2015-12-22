@@ -8,17 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		511FD6761C03FEEC00696977 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511FD6751C03FEEC00696977 /* Security.framework */; };
-		511FD6B91C047B9800696977 /* myFB-logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6B81C047B9800696977 /* myFB-logo.png */; settings = {ASSET_TAGS = (); }; };
-		511FD6F71C05A1B100696977 /* newspaper-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6F51C05A1B100696977 /* newspaper-48.png */; settings = {ASSET_TAGS = (); }; };
-		511FD6F81C05A1B100696977 /* picture-3-48.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6F61C05A1B100696977 /* picture-3-48.png */; settings = {ASSET_TAGS = (); }; };
 		511FD6FA1C05A25400696977 /* picture-3-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6F91C05A25400696977 /* picture-3-24.png */; settings = {ASSET_TAGS = (); }; };
 		511FD6FC1C05A2BB00696977 /* pages-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6FB1C05A2BB00696977 /* pages-2-24.png */; settings = {ASSET_TAGS = (); }; };
 		511FD6FE1C05D28D00696977 /* WaitScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6FD1C05D28D00696977 /* WaitScreen.png */; settings = {ASSET_TAGS = (); }; };
-		51338D561BFDE24800143D71 /* user-50.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51338D551BFDE24800143D71 /* user-50.jpg */; settings = {ASSET_TAGS = (); }; };
-		5172EC2A1C0DB61B00594320 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5172EC281C0DB61B00594320 /* TestViewController.m */; settings = {ASSET_TAGS = (); }; };
-		5172EC2B1C0DB61B00594320 /* TestViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5172EC291C0DB61B00594320 /* TestViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		5172EC2E1C101E0100594320 /* UploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5172EC2D1C101E0100594320 /* UploadManager.m */; settings = {ASSET_TAGS = (); }; };
-		5172EC311C1035B500594320 /* IMG_1561.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 5172EC301C1035B500594320 /* IMG_1561.jpg */; settings = {ASSET_TAGS = (); }; };
 		5172EC451C14D58600594320 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5172EC441C14D58600594320 /* AssetsLibrary.framework */; };
 		5172EC471C157AC600594320 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5172EC461C157AC600594320 /* SecondView.xib */; settings = {ASSET_TAGS = (); }; };
 		518A42751C1E7D8F00523C92 /* ImageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518A42731C1E7D8F00523C92 /* ImageScrollViewController.m */; settings = {ASSET_TAGS = (); }; };
@@ -31,8 +24,6 @@
 		51A030041C0C4485006197A5 /* Cache.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FD67E1C04071D00696977 /* Cache.m */; };
 		51A030051C0C4485006197A5 /* Feed.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD2C021BFB244A000FCD3A /* Feed.m */; };
 		51A030061C0C4485006197A5 /* Paging.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD2C0A1BFC8F41000FCD3A /* Paging.m */; };
-		51A030071C0C4485006197A5 /* FeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD2BCF1BFACBF8000FCD3A /* FeedManager.m */; };
-		51A030081C0C4485006197A5 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FD6BE1C05648700696977 /* FirstViewController.m */; };
 		51A030091C0C4485006197A5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FD6C11C05649A00696977 /* SecondViewController.m */; };
 		51A0300B1C0C4485006197A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A910A41BF5E45300BF3CCA /* ViewController.m */; };
 		51A910A81BF5E45300BF3CCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A910A61BF5E45300BF3CCA /* Main.storyboard */; };
@@ -41,12 +32,10 @@
 		51A910C11BF5E83B00BF3CCA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910BE1BF5E83A00BF3CCA /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
 		51A910C21BF5E83B00BF3CCA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910BF1BF5E83B00BF3CCA /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
 		51A910C31BF5E83B00BF3CCA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910C01BF5E83B00BF3CCA /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
-		51A910CD1BF79BC900BF3CCA /* 10467756_1495326504061304_1921434647_n.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51A910CC1BF79BC900BF3CCA /* 10467756_1495326504061304_1921434647_n.jpg */; settings = {ASSET_TAGS = (); }; };
-		51A910CF1BF7AB4800BF3CCA /* aoa-seolhyun.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51A910CE1BF7AB4800BF3CCA /* aoa-seolhyun.jpg */; settings = {ASSET_TAGS = (); }; };
+		51C702E91C2930070050C348 /* FeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C702E81C2930070050C348 /* FeedManager.m */; settings = {ASSET_TAGS = (); }; };
 		51CC4B1C1C16DA250005B037 /* 2w3536h.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51CC4B1B1C16DA250005B037 /* 2w3536h.jpg */; settings = {ASSET_TAGS = (); }; };
 		51D0C6DF1C19304500FE3D9F /* FirstSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D0C6DD1C19304500FE3D9F /* FirstSubViewController.m */; settings = {ASSET_TAGS = (); }; };
 		51D0C6E01C19304500FE3D9F /* FirstSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D0C6DE1C19304500FE3D9F /* FirstSubViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		51D0C6E21C19518C00FE3D9F /* user-8-50.png in Resources */ = {isa = PBXBuildFile; fileRef = 51D0C6E11C19518C00FE3D9F /* user-8-50.png */; settings = {ASSET_TAGS = (); }; };
 		51D0C6E61C19728000FE3D9F /* FSVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D0C6E41C19728000FE3D9F /* FSVCell.m */; settings = {ASSET_TAGS = (); }; };
 		51D0C6E71C19728000FE3D9F /* FSVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D0C6E51C19728000FE3D9F /* FSVCell.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
@@ -61,23 +50,13 @@
 		511FD67E1C04071D00696977 /* Cache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Cache.m; sourceTree = "<group>"; };
 		511FD6B51C04734B00696977 /* LoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoginViewController.h; sourceTree = "<group>"; };
 		511FD6B61C04734B00696977 /* LoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoginViewController.m; sourceTree = "<group>"; };
-		511FD6B81C047B9800696977 /* myFB-logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "myFB-logo.png"; sourceTree = "<group>"; };
-		511FD6BD1C05648700696977 /* FirstViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		511FD6BE1C05648700696977 /* FirstViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
 		511FD6C01C05649A00696977 /* SecondViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
 		511FD6C11C05649A00696977 /* SecondViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
-		511FD6F51C05A1B100696977 /* newspaper-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "newspaper-48.png"; sourceTree = "<group>"; };
-		511FD6F61C05A1B100696977 /* picture-3-48.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-3-48.png"; sourceTree = "<group>"; };
 		511FD6F91C05A25400696977 /* picture-3-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "picture-3-24.png"; sourceTree = "<group>"; };
 		511FD6FB1C05A2BB00696977 /* pages-2-24.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "pages-2-24.png"; sourceTree = "<group>"; };
 		511FD6FD1C05D28D00696977 /* WaitScreen.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = WaitScreen.png; sourceTree = "<group>"; };
-		51338D551BFDE24800143D71 /* user-50.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "user-50.jpg"; sourceTree = "<group>"; };
-		5172EC271C0DB61B00594320 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
-		5172EC281C0DB61B00594320 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
-		5172EC291C0DB61B00594320 /* TestViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TestViewController.xib; sourceTree = "<group>"; };
 		5172EC2C1C101E0100594320 /* UploadManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UploadManager.h; sourceTree = "<group>"; };
 		5172EC2D1C101E0100594320 /* UploadManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UploadManager.m; sourceTree = "<group>"; };
-		5172EC301C1035B500594320 /* IMG_1561.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = IMG_1561.jpg; sourceTree = "<group>"; };
 		5172EC441C14D58600594320 /* AssetsLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AssetsLibrary.framework; path = System/Library/Frameworks/AssetsLibrary.framework; sourceTree = SDKROOT; };
 		5172EC461C157AC600594320 /* SecondView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SecondView.xib; sourceTree = "<group>"; };
 		518A42721C1E7D8F00523C92 /* ImageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollViewController.h; sourceTree = "<group>"; };
@@ -97,19 +76,16 @@
 		51A910BE1BF5E83A00BF3CCA /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		51A910BF1BF5E83B00BF3CCA /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		51A910C01BF5E83B00BF3CCA /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
-		51A910CC1BF79BC900BF3CCA /* 10467756_1495326504061304_1921434647_n.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 10467756_1495326504061304_1921434647_n.jpg; sourceTree = "<group>"; };
-		51A910CE1BF7AB4800BF3CCA /* aoa-seolhyun.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "aoa-seolhyun.jpg"; sourceTree = "<group>"; };
-		51AD2BCE1BFACBF8000FCD3A /* FeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FeedManager.h; path = ../FeedManager.h; sourceTree = "<group>"; };
-		51AD2BCF1BFACBF8000FCD3A /* FeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FeedManager.m; path = ../FeedManager.m; sourceTree = "<group>"; };
 		51AD2C011BFB244A000FCD3A /* Feed.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Feed.h; sourceTree = "<group>"; };
 		51AD2C021BFB244A000FCD3A /* Feed.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Feed.m; sourceTree = "<group>"; };
 		51AD2C091BFC8F41000FCD3A /* Paging.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = Paging.h; path = Assets.xcassets/Paging.h; sourceTree = "<group>"; };
 		51AD2C0A1BFC8F41000FCD3A /* Paging.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = Paging.m; path = Assets.xcassets/Paging.m; sourceTree = "<group>"; };
+		51C702E71C2930070050C348 /* FeedManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FeedManager.h; sourceTree = "<group>"; };
+		51C702E81C2930070050C348 /* FeedManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FeedManager.m; sourceTree = "<group>"; };
 		51CC4B1B1C16DA250005B037 /* 2w3536h.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 2w3536h.jpg; sourceTree = "<group>"; };
 		51D0C6DC1C19304500FE3D9F /* FirstSubViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FirstSubViewController.h; sourceTree = "<group>"; };
 		51D0C6DD1C19304500FE3D9F /* FirstSubViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FirstSubViewController.m; sourceTree = "<group>"; };
 		51D0C6DE1C19304500FE3D9F /* FirstSubViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FirstSubViewController.xib; sourceTree = "<group>"; };
-		51D0C6E11C19518C00FE3D9F /* user-8-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "user-8-50.png"; sourceTree = "<group>"; };
 		51D0C6E31C19728000FE3D9F /* FSVCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FSVCell.h; sourceTree = "<group>"; };
 		51D0C6E41C19728000FE3D9F /* FSVCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FSVCell.m; sourceTree = "<group>"; };
 		51D0C6E51C19728000FE3D9F /* FSVCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FSVCell.xib; sourceTree = "<group>"; };
@@ -181,19 +157,11 @@
 		51A9109D1BF5E45300BF3CCA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				51D0C6E11C19518C00FE3D9F /* user-8-50.png */,
 				51CC4B1B1C16DA250005B037 /* 2w3536h.jpg */,
 				511FD6FD1C05D28D00696977 /* WaitScreen.png */,
 				511FD6FB1C05A2BB00696977 /* pages-2-24.png */,
 				511FD6F91C05A25400696977 /* picture-3-24.png */,
-				511FD6F51C05A1B100696977 /* newspaper-48.png */,
-				511FD6F61C05A1B100696977 /* picture-3-48.png */,
-				511FD6B81C047B9800696977 /* myFB-logo.png */,
-				51A910CE1BF7AB4800BF3CCA /* aoa-seolhyun.jpg */,
-				51A910CC1BF79BC900BF3CCA /* 10467756_1495326504061304_1921434647_n.jpg */,
 				51A9109E1BF5E45300BF3CCA /* main.m */,
-				51338D551BFDE24800143D71 /* user-50.jpg */,
-				5172EC301C1035B500594320 /* IMG_1561.jpg */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -222,10 +190,8 @@
 				51AD2C021BFB244A000FCD3A /* Feed.m */,
 				51AD2C091BFC8F41000FCD3A /* Paging.h */,
 				51AD2C0A1BFC8F41000FCD3A /* Paging.m */,
-				51AD2BCE1BFACBF8000FCD3A /* FeedManager.h */,
-				51AD2BCF1BFACBF8000FCD3A /* FeedManager.m */,
-				511FD6BD1C05648700696977 /* FirstViewController.h */,
-				511FD6BE1C05648700696977 /* FirstViewController.m */,
+				51C702E71C2930070050C348 /* FeedManager.h */,
+				51C702E81C2930070050C348 /* FeedManager.m */,
 			);
 			name = FeedManager;
 			sourceTree = "<group>";
@@ -247,9 +213,6 @@
 				511FD6C01C05649A00696977 /* SecondViewController.h */,
 				511FD6C11C05649A00696977 /* SecondViewController.m */,
 				5172EC461C157AC600594320 /* SecondView.xib */,
-				5172EC271C0DB61B00594320 /* TestViewController.h */,
-				5172EC281C0DB61B00594320 /* TestViewController.m */,
-				5172EC291C0DB61B00594320 /* TestViewController.xib */,
 			);
 			name = FeedTable;
 			sourceTree = "<group>";
@@ -313,20 +276,11 @@
 			files = (
 				5172EC471C157AC600594320 /* SecondView.xib in Resources */,
 				51A910B01BF5E45300BF3CCA /* LaunchScreen.storyboard in Resources */,
-				5172EC2B1C0DB61B00594320 /* TestViewController.xib in Resources */,
-				51338D561BFDE24800143D71 /* user-50.jpg in Resources */,
-				511FD6B91C047B9800696977 /* myFB-logo.png in Resources */,
 				51CC4B1C1C16DA250005B037 /* 2w3536h.jpg in Resources */,
-				5172EC311C1035B500594320 /* IMG_1561.jpg in Resources */,
 				511FD6FE1C05D28D00696977 /* WaitScreen.png in Resources */,
 				51A910AD1BF5E45300BF3CCA /* Assets.xcassets in Resources */,
-				51A910CD1BF79BC900BF3CCA /* 10467756_1495326504061304_1921434647_n.jpg in Resources */,
-				511FD6F71C05A1B100696977 /* newspaper-48.png in Resources */,
-				51D0C6E21C19518C00FE3D9F /* user-8-50.png in Resources */,
 				51D0C6E01C19304500FE3D9F /* FirstSubViewController.xib in Resources */,
-				511FD6F81C05A1B100696977 /* picture-3-48.png in Resources */,
 				511FD6FA1C05A25400696977 /* picture-3-24.png in Resources */,
-				51A910CF1BF7AB4800BF3CCA /* aoa-seolhyun.jpg in Resources */,
 				51A910A81BF5E45300BF3CCA /* Main.storyboard in Resources */,
 				51D0C6E71C19728000FE3D9F /* FSVCell.xib in Resources */,
 				511FD6FC1C05A2BB00696977 /* pages-2-24.png in Resources */,
@@ -345,14 +299,12 @@
 				51A030041C0C4485006197A5 /* Cache.m in Sources */,
 				51A030051C0C4485006197A5 /* Feed.m in Sources */,
 				51A030061C0C4485006197A5 /* Paging.m in Sources */,
-				51A030071C0C4485006197A5 /* FeedManager.m in Sources */,
-				51A030081C0C4485006197A5 /* FirstViewController.m in Sources */,
 				51A030091C0C4485006197A5 /* SecondViewController.m in Sources */,
 				51A0300B1C0C4485006197A5 /* ViewController.m in Sources */,
 				51D0C6E61C19728000FE3D9F /* FSVCell.m in Sources */,
-				5172EC2A1C0DB61B00594320 /* TestViewController.m in Sources */,
 				5172EC2E1C101E0100594320 /* UploadManager.m in Sources */,
 				51A030021C0C4463006197A5 /* User.m in Sources */,
+				51C702E91C2930070050C348 /* FeedManager.m in Sources */,
 				51A030011C0C4454006197A5 /* LoginViewController.m in Sources */,
 				518A42751C1E7D8F00523C92 /* ImageScrollViewController.m in Sources */,
 				51D0C6DF1C19304500FE3D9F /* FirstSubViewController.m in Sources */,

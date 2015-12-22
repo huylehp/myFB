@@ -9,13 +9,12 @@
 #import "AppDelegate.h"
 #import <FBSDKCoreKit/FBSDKCoreKit.h>
 #import <FBSDKLoginKit/FBSDKLoginKit.h>
-#import "TestViewController.h"
 @interface AppDelegate ()
 
 @end
 
 @implementation AppDelegate
-@synthesize navigationController, loginViewController, firstViewController, secondViewController, tabBarController;
+@synthesize navigationController, loginViewController, secondViewController, tabBarController;
 - (BOOL)application:(UIApplication *)application openURL:(nonnull NSURL *)url sourceApplication:(nullable NSString *)sourceApplication annotation:(nonnull id)annotation
 {
     return [[FBSDKApplicationDelegate sharedInstance] application:application openURL:url sourceApplication:sourceApplication annotation:annotation];
