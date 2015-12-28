@@ -242,6 +242,8 @@
             if (f.message) {
                 imageScrollView.message = f.message;
             }
+//            [self.navigationController presentViewController:self.navigationC animated:YES completion:nil];
+//            [self.navigationController showViewController:imageScrollView sender:nil];
             [self.navigationController pushViewController:imageScrollView animated:YES];
         }
     } else {
@@ -310,7 +312,7 @@
     FBSDKLoginManager *logout = [[FBSDKLoginManager alloc] init];
     [logout logOut];
     AppDelegate *appDelegate = [UIApplication sharedApplication].delegate;
-    [appDelegate.window setRootViewController:appDelegate.navigationController];
+    [appDelegate.window setRootViewController:appDelegate.loginViewController];
 }
 - (IBAction)logoutButton:(id)sender {
     NSLog(@"Logged out");

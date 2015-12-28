@@ -8,7 +8,9 @@
 
 #import "ImageScrollViewController.h"
 
-@interface ImageScrollViewController ()
+@interface ImageScrollViewController (){
+    UIView *_blackMask;
+}
 
 @end
 
@@ -27,10 +29,10 @@
 //        self.imageView = [[UIImageView alloc] initWithImage:self.imageToView];
 //        self.imageView.frame = CGRectMake(0.0, 0.0, self.imageToView.size.width, self.imageToView.size.height);
 //        [self.scrollView addSubview:self.imageView];
-        self.scrollView.backgroundColor = [UIColor blackColor];
+//        self.scrollView.backgroundColor = [UIColor blackColor];
         self.scrollView.contentSize = self.imageToView.size;
         self.imageView.image = self.imageToView;
-        self.imageView.contentMode = UIViewContentModeCenter;
+//        self.imageView.contentMode = UIViewContentModeCenter;
         if (self.imageView.bounds.size.width < self.imageToView.size.width || self.imageView.bounds.size.height < self.imageToView.size.height) {
             NSLog(@"Yes");
             self.imageView.contentMode = UIViewContentModeScaleAspectFit;
@@ -48,6 +50,7 @@
         UITapGestureRecognizer *singleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewSingleTapped:)];
         singleTapRecognizer.numberOfTapsRequired = 1;
         singleTapRecognizer.numberOfTouchesRequired = 1;
+        [singleTapRecognizer requireGestureRecognizerToFail:doubleTapRecognizer];        
         [self.scrollView addGestureRecognizer:singleTapRecognizer];
         //
 //        UITapGestureRecognizer *twoFingerTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewTwoFingerTapped:)];
@@ -58,11 +61,13 @@
     // Do any additional setup after loading the view from its nib.
 
 }
+
 - (void)viewWillLayoutSubviews{
 //    self.imageView.center = self.view.center;
 }
 - (void) viewWillAppear:(BOOL)animated
 {
+    
     [super viewWillAppear:animated];
 //    [self.navigationController setHidesBarsOnTap:YES];
 //    CGRect scrollViewFrame = self.scrollView.frame;
@@ -73,8 +78,15 @@
 //    
 //    self.scrollView.maximumZoomScale = 1.0f;
 //    self.scrollView.zoomScale = minScale;
-//    
-    [self centerScrollViewContents];
+//
+    CGRect windowBounds = [[UIScreen mainScreen] bounds];
+    _blackMask = [[UIView alloc] initWithFrame:windowBounds];
+    _blackMask.backgroundColor = [UIColor blackColor];
+    _blackMask.alpha = 0.0f;
+    _blackMask.autoresizingMask = UIViewAutoresizingFlexibleHeight | UIViewAutoresizingFlexibleWidth;
+    [self.view insertSubview:_blackMask atIndex:0];
+
+//    [self centerScrollViewContents];
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -83,7 +95,11 @@
 #pragma mark - Selector Scroll
 - (void)scrollViewSingleTapped:(UITapGestureRecognizer *)recognizer
 {
-    [self.navigationController setHidesBarsOnTap:YES];
+    if (self.navigationController.navigationBar.isHidden == YES ) {
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
+    } else {
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
+    }
 }
 - (void)scrollViewDoubleTapped:(UITapGestureRecognizer *)recognizer
 {
@@ -109,10 +125,14 @@
     }
     else {
         NSLog(@"Transform scale ");
-        CGFloat w = self.scrollView.bounds.size.width;
-        CGFloat h = self.scrollView.bounds.size.height;
-        CGFloat x = w / 2.0f;
-        CGFloat y = h / 2.0f;
+        CGFloat newZoomScale = 1.0;
+
+        CGSize scrollViewSize = self.scrollView.bounds.size;
+        
+        CGFloat w = scrollViewSize.width / newZoomScale;
+        CGFloat h = scrollViewSize.height / newZoomScale;
+        CGFloat x = pointInView.x / 2.0f;
+        CGFloat y = pointInView.y / 2.0f;
         
         CGRect rectToZoomOut = CGRectMake(x, y, w, h);
         

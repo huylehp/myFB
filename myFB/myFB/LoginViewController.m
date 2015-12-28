@@ -70,9 +70,13 @@
     appDelegate.firstSubViewController = [[ FirstSubViewController alloc] initWithNibName:nil bundle:NULL];
     [appDelegate.secondViewController setDelegate:appDelegate.firstSubViewController];
     appDelegate.tabBarController = [[UITabBarController alloc] init];
-
-    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:appDelegate.firstSubViewController];
-    appDelegate.tabBarController.viewControllers = @[ navController, appDelegate.secondViewController];
+    
+//    UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:appDelegate.firstSubViewController];
+    if (appDelegate.navigationController == nil) {
+        appDelegate.navigationController = [[UINavigationController alloc] init];
+    }
+    [appDelegate.navigationController pushViewController:appDelegate.firstSubViewController animated:YES];
+    appDelegate.tabBarController.viewControllers = @[ appDelegate.navigationController, appDelegate.secondViewController];
     [appDelegate.window setRootViewController:appDelegate.tabBarController];
 }
 - (void)designLoginView

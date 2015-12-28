@@ -25,15 +25,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    navigationController = [[UINavigationController alloc] init];
-    [self.window addSubview:navigationController.view];
+//    navigationController = [[UINavigationController alloc] init];
+//    [self.window addSubview:navigationController.view];
     
-    self.window.rootViewController = navigationController;
+//    self.window.rootViewController = navigationController;
     if (loginViewController == nil) {
         LoginViewController *loginView = [[LoginViewController alloc] init];
         loginViewController = loginView;
     }
-    [navigationController pushViewController:loginViewController animated:YES];
+    self.window.rootViewController = loginViewController;
+//    [navigationController pushViewController:loginViewController animated:YES];
     
 //    TestViewController *testVC = [[TestViewController alloc] initWithNibName:@"TestViewController" bundle:nil];
     
