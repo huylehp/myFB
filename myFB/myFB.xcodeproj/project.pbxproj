@@ -8,14 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		511FD6761C03FEEC00696977 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511FD6751C03FEEC00696977 /* Security.framework */; };
-		511FD6FA1C05A25400696977 /* picture-3-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6F91C05A25400696977 /* picture-3-24.png */; settings = {ASSET_TAGS = (); }; };
-		511FD6FC1C05A2BB00696977 /* pages-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6FB1C05A2BB00696977 /* pages-2-24.png */; settings = {ASSET_TAGS = (); }; };
-		511FD6FE1C05D28D00696977 /* WaitScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6FD1C05D28D00696977 /* WaitScreen.png */; settings = {ASSET_TAGS = (); }; };
-		5172EC2E1C101E0100594320 /* UploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5172EC2D1C101E0100594320 /* UploadManager.m */; settings = {ASSET_TAGS = (); }; };
+		511FD6FA1C05A25400696977 /* picture-3-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6F91C05A25400696977 /* picture-3-24.png */; };
+		511FD6FC1C05A2BB00696977 /* pages-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6FB1C05A2BB00696977 /* pages-2-24.png */; };
+		511FD6FE1C05D28D00696977 /* WaitScreen.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6FD1C05D28D00696977 /* WaitScreen.png */; };
+		5172EC2E1C101E0100594320 /* UploadManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 5172EC2D1C101E0100594320 /* UploadManager.m */; };
 		5172EC451C14D58600594320 /* AssetsLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5172EC441C14D58600594320 /* AssetsLibrary.framework */; };
-		5172EC471C157AC600594320 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5172EC461C157AC600594320 /* SecondView.xib */; settings = {ASSET_TAGS = (); }; };
-		518A42751C1E7D8F00523C92 /* ImageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518A42731C1E7D8F00523C92 /* ImageScrollViewController.m */; settings = {ASSET_TAGS = (); }; };
-		518A42761C1E7D8F00523C92 /* ImageScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518A42741C1E7D8F00523C92 /* ImageScrollViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		5172EC471C157AC600594320 /* SecondView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5172EC461C157AC600594320 /* SecondView.xib */; };
+		518A42751C1E7D8F00523C92 /* ImageScrollViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 518A42731C1E7D8F00523C92 /* ImageScrollViewController.m */; };
+		518A42761C1E7D8F00523C92 /* ImageScrollViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 518A42741C1E7D8F00523C92 /* ImageScrollViewController.xib */; };
 		51A02FFF1C0C4429006197A5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A9109E1BF5E45300BF3CCA /* main.m */; };
 		51A030001C0C4445006197A5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A910A11BF5E45300BF3CCA /* AppDelegate.m */; };
 		51A030011C0C4454006197A5 /* LoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FD6B61C04734B00696977 /* LoginViewController.m */; };
@@ -26,18 +26,19 @@
 		51A030061C0C4485006197A5 /* Paging.m in Sources */ = {isa = PBXBuildFile; fileRef = 51AD2C0A1BFC8F41000FCD3A /* Paging.m */; };
 		51A030091C0C4485006197A5 /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 511FD6C11C05649A00696977 /* SecondViewController.m */; };
 		51A0300B1C0C4485006197A5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A910A41BF5E45300BF3CCA /* ViewController.m */; };
+		51A79FF31C3382F1005CEB69 /* ScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 51A79FF11C3382F1005CEB69 /* ScrollView.m */; };
 		51A910A81BF5E45300BF3CCA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A910A61BF5E45300BF3CCA /* Main.storyboard */; };
 		51A910AD1BF5E45300BF3CCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 51A910AC1BF5E45300BF3CCA /* Assets.xcassets */; };
 		51A910B01BF5E45300BF3CCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 51A910AE1BF5E45300BF3CCA /* LaunchScreen.storyboard */; };
-		51A910C11BF5E83B00BF3CCA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910BE1BF5E83A00BF3CCA /* FBSDKCoreKit.framework */; settings = {ASSET_TAGS = (); }; };
-		51A910C21BF5E83B00BF3CCA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910BF1BF5E83B00BF3CCA /* FBSDKLoginKit.framework */; settings = {ASSET_TAGS = (); }; };
-		51A910C31BF5E83B00BF3CCA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910C01BF5E83B00BF3CCA /* FBSDKShareKit.framework */; settings = {ASSET_TAGS = (); }; };
-		51C702E91C2930070050C348 /* FeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C702E81C2930070050C348 /* FeedManager.m */; settings = {ASSET_TAGS = (); }; };
-		51CC4B1C1C16DA250005B037 /* 2w3536h.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51CC4B1B1C16DA250005B037 /* 2w3536h.jpg */; settings = {ASSET_TAGS = (); }; };
-		51D0C6DF1C19304500FE3D9F /* FirstSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D0C6DD1C19304500FE3D9F /* FirstSubViewController.m */; settings = {ASSET_TAGS = (); }; };
-		51D0C6E01C19304500FE3D9F /* FirstSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D0C6DE1C19304500FE3D9F /* FirstSubViewController.xib */; settings = {ASSET_TAGS = (); }; };
-		51D0C6E61C19728000FE3D9F /* FSVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D0C6E41C19728000FE3D9F /* FSVCell.m */; settings = {ASSET_TAGS = (); }; };
-		51D0C6E71C19728000FE3D9F /* FSVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D0C6E51C19728000FE3D9F /* FSVCell.xib */; settings = {ASSET_TAGS = (); }; };
+		51A910C11BF5E83B00BF3CCA /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910BE1BF5E83A00BF3CCA /* FBSDKCoreKit.framework */; };
+		51A910C21BF5E83B00BF3CCA /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910BF1BF5E83B00BF3CCA /* FBSDKLoginKit.framework */; };
+		51A910C31BF5E83B00BF3CCA /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51A910C01BF5E83B00BF3CCA /* FBSDKShareKit.framework */; };
+		51C702E91C2930070050C348 /* FeedManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 51C702E81C2930070050C348 /* FeedManager.m */; };
+		51CC4B1C1C16DA250005B037 /* 2w3536h.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 51CC4B1B1C16DA250005B037 /* 2w3536h.jpg */; };
+		51D0C6DF1C19304500FE3D9F /* FirstSubViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D0C6DD1C19304500FE3D9F /* FirstSubViewController.m */; };
+		51D0C6E01C19304500FE3D9F /* FirstSubViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D0C6DE1C19304500FE3D9F /* FirstSubViewController.xib */; };
+		51D0C6E61C19728000FE3D9F /* FSVCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 51D0C6E41C19728000FE3D9F /* FSVCell.m */; };
+		51D0C6E71C19728000FE3D9F /* FSVCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 51D0C6E51C19728000FE3D9F /* FSVCell.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -62,6 +63,8 @@
 		518A42721C1E7D8F00523C92 /* ImageScrollViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageScrollViewController.h; sourceTree = "<group>"; };
 		518A42731C1E7D8F00523C92 /* ImageScrollViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ImageScrollViewController.m; sourceTree = "<group>"; };
 		518A42741C1E7D8F00523C92 /* ImageScrollViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ImageScrollViewController.xib; sourceTree = "<group>"; };
+		51A79FF01C3382F1005CEB69 /* ScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ScrollView.h; sourceTree = "<group>"; };
+		51A79FF11C3382F1005CEB69 /* ScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ScrollView.m; sourceTree = "<group>"; };
 		51A9109A1BF5E45300BF3CCA /* myFB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = myFB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		51A9109E1BF5E45300BF3CCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		51A910A01BF5E45300BF3CCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -204,6 +207,8 @@
 				51D0C6DC1C19304500FE3D9F /* FirstSubViewController.h */,
 				51D0C6DD1C19304500FE3D9F /* FirstSubViewController.m */,
 				51D0C6DE1C19304500FE3D9F /* FirstSubViewController.xib */,
+				51A79FF01C3382F1005CEB69 /* ScrollView.h */,
+				51A79FF11C3382F1005CEB69 /* ScrollView.m */,
 				518A42721C1E7D8F00523C92 /* ImageScrollViewController.h */,
 				518A42731C1E7D8F00523C92 /* ImageScrollViewController.m */,
 				518A42741C1E7D8F00523C92 /* ImageScrollViewController.xib */,
@@ -296,6 +301,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				51A030031C0C4485006197A5 /* SUCacheItem.m in Sources */,
+				51A79FF31C3382F1005CEB69 /* ScrollView.m in Sources */,
 				51A030041C0C4485006197A5 /* Cache.m in Sources */,
 				51A030051C0C4485006197A5 /* Feed.m in Sources */,
 				51A030061C0C4485006197A5 /* Paging.m in Sources */,

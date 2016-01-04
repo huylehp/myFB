@@ -26,20 +26,20 @@
         self.messageNav.topItem.title = nil;
     }
     if (self.imageToView) {
-//        self.imageView = [[UIImageView alloc] initWithImage:self.imageToView];
+        self.imageView = [[UIImageView alloc] initWithImage:self.imageToView];
 //        self.imageView.frame = CGRectMake(0.0, 0.0, self.imageToView.size.width, self.imageToView.size.height);
-//        [self.scrollView addSubview:self.imageView];
-//        self.scrollView.backgroundColor = [UIColor blackColor];
-        self.scrollView.contentSize = self.imageToView.size;
-        self.imageView.image = self.imageToView;
-//        self.imageView.contentMode = UIViewContentModeCenter;
-        if (self.imageView.bounds.size.width < self.imageToView.size.width || self.imageView.bounds.size.height < self.imageToView.size.height) {
-            NSLog(@"Yes");
-            self.imageView.contentMode = UIViewContentModeScaleAspectFit;
-        } else {
-            NSLog(@"No");
-            self.imageView.contentMode = UIViewContentModeScaleAspectFill;
-        }
+        self.imageView.center = self.view.center;
+        [self.scrollView addSubview:self.imageView];
+        self.scrollView.contentSize = self.imageView.frame.size;
+        NSLog(@"ContentSize: height: %f, width: %f", self.scrollView.contentSize.height, self.scrollView.contentSize.width);
+
+//        if (self.imageView.bounds.size.width < self.imageToView.size.width || self.imageView.bounds.size.height < self.imageToView.size.height) {
+//            NSLog(@"Yes");
+//            self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+//        } else {
+//            NSLog(@"No");
+//            self.imageView.contentMode = UIViewContentModeScaleAspectFill;
+//        }
         UITapGestureRecognizer *doubleTapRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(scrollViewDoubleTapped:)];
         doubleTapRecognizer.numberOfTapsRequired = 2;
         doubleTapRecognizer.numberOfTouchesRequired = 1;
@@ -65,10 +65,23 @@
 - (void)viewWillLayoutSubviews{
 //    self.imageView.center = self.view.center;
 }
+- (void) viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    NSLog(@"ViewDidAppear");
+//    NSLog(@"height: %f, width: %f", self.imageView.frame.size.height, self.imageView.frame.size.width);
+    //        self.imageView.contentMode = UIViewContentModeCenter;
+//    NSLog(@"bound height: %f, width %f", self.imageView.bounds.size.height, self.imageView.bounds.size.width);
+//    self.scrollView.contentSize = newSize;
+    NSLog(@"ContentSize: height: %f, width: %f", self.scrollView.contentSize.height, self.scrollView.contentSize.width);
+}
 - (void) viewWillAppear:(BOOL)animated
 {
     
     [super viewWillAppear:animated];
+    NSLog(@"ViewWillAppear");
+//    self.scrollView.backgroundColor = [UIColor blackColor];
+
+//    self.scrollView.contentSize = newSize;
 //    [self.navigationController setHidesBarsOnTap:YES];
 //    CGRect scrollViewFrame = self.scrollView.frame;
 //    CGFloat scaleWidth = scrollViewFrame.size.width / self.scrollView.contentSize.width;
@@ -96,7 +109,9 @@
 - (void)scrollViewSingleTapped:(UITapGestureRecognizer *)recognizer
 {
     if (self.navigationController.navigationBar.isHidden == YES ) {
-        [self.navigationController setNavigationBarHidden:NO animated:NO];
+        if (self.scrollView.zoomScale == 1.0) {
+            [self.navigationController setNavigationBarHidden:NO animated:NO];
+        }
     } else {
         [self.navigationController setNavigationBarHidden:YES animated:NO];
     }
@@ -122,6 +137,7 @@
         
         // 4
         [self.scrollView zoomToRect:rectToZoomTo animated:YES];
+        [self.navigationController setNavigationBarHidden:YES animated:NO];
     }
     else {
         NSLog(@"Transform scale ");
@@ -131,12 +147,13 @@
         
         CGFloat w = scrollViewSize.width / newZoomScale;
         CGFloat h = scrollViewSize.height / newZoomScale;
-        CGFloat x = pointInView.x / 2.0f;
-        CGFloat y = pointInView.y / 2.0f;
+        CGFloat x = pointInView.x - (w/ 2.0f);
+        CGFloat y = pointInView.y - (h/ 2.0f);
         
         CGRect rectToZoomOut = CGRectMake(x, y, w, h);
         
         [self.scrollView zoomToRect:rectToZoomOut animated:YES];
+        [self.navigationController setNavigationBarHidden:NO animated:NO];
     }
 }
 - (void)scrollViewTwoFingerTapped:(UITapGestureRecognizer *)recognizer
@@ -168,7 +185,18 @@
 }
 - (void)scrollViewDidZoom:(UIScrollView *)scrollView
 {
-    [self centerScrollViewContents];
+//    [self centerScrollViewContents];
+}
+- (void)scrollViewDidScroll:(UIScrollView *)scrollView
+{
+//    NSLog(@"Scroll");
+}
+- (void)scrollViewDidEndZooming:(UIScrollView *)scrollView withView:(UIView *)view atScale:(CGFloat)scale{
+    [UIView animateWithDuration:0.3 delay:0.0 options:UIViewAnimationOptionCurveEaseInOut animations:^{
+        NSLog(@"ContentSize:height %f ,width %f ", scrollView.contentSize.height, scrollView.contentSize.width);
+        [self centerScrollViewContents];
+    } completion:nil];
+
 }
 /*
 #pragma mark - Navigation
