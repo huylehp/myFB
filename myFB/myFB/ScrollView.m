@@ -7,7 +7,7 @@
 //
 
 #import "ScrollView.h"
-
+#define VIEW_CLASS UIView
 @interface ScrollView ()
 
 @property (nonatomic, strong) UIScrollView *scrollView;
@@ -29,9 +29,8 @@
     if (_imageToView) {
         _imageView = [[UIImageView alloc] initWithImage:_imageToView];
         _imageView.center = self.view.center;
-//        _imageView.image = _imageToView;
-        oldImageFrame = CGRectMake(_imageView.frame.origin.x, _imageView.frame.origin.y, _imageView.frame.size.width, _imageView.frame.size.height);
         _scrollView = [[UIScrollView alloc] initWithFrame:self.view.bounds];
+        
         [_scrollView addSubview:_imageView];
         _scrollView.contentSize = _imageView.frame.size;
         
@@ -71,7 +70,21 @@
     self.tabBarController.tabBar.hidden = YES;
 //    [self centerScrollViewContents];
 }
+
 - (void)viewWillLayoutSubviews{
+    [super viewWillLayoutSubviews];
+    //Constraints
+    _scrollView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSLayoutConstraint *constraint;
+    constraint = [NSLayoutConstraint constraintWithItem:_scrollView attribute:NSLayoutAttributeLeading relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeLeading multiplier:1.0 constant:0.0];
+    [_scrollView addConstraint:constraint];
+    constraint = [NSLayoutConstraint constraintWithItem:_scrollView attribute:NSLayoutAttributeTrailing relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTrailing multiplier:1.0 constant:0.0];
+    [_scrollView addConstraint:constraint];
+    constraint = [NSLayoutConstraint constraintWithItem:_scrollView attribute:NSLayoutAttributeTop relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeTop multiplier:1.0 constant:0.0];
+    [_scrollView addConstraint:constraint];
+    constraint = [NSLayoutConstraint constraintWithItem:_scrollView attribute:NSLayoutAttributeBottom relatedBy:NSLayoutRelationEqual toItem:self.view attribute:NSLayoutAttributeBottom multiplier:1.0 constant:0.0];
+    [_scrollView addConstraint:constraint];
+    
     
 }
 - (UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView {
@@ -97,17 +110,6 @@
 //    return _imageView;
 //}
 
-- (void)centerContent {
-    CGFloat top = 0, left = 0;
-    if (_scrollView.contentSize.width < _scrollView.bounds.size.width) {
-        left = (_scrollView.bounds.size.width-_scrollView.contentSize.width) * 0.5f;
-    }
-    if (_scrollView.contentSize.height < _scrollView.bounds.size.height) {
-        top = (_scrollView.bounds.size.height-_scrollView.contentSize.height) * 0.5f;
-    }
-    NSLog(@"left: %f, top: %f", left, top);
-    _scrollView.contentInset = UIEdgeInsetsMake(top, left, top, left);
-}
 - (void) viewWillDisappear:(BOOL)animated{
     self.tabBarController.tabBar.hidden = NO;
 }
@@ -198,3 +200,11 @@
 */
 
 @end
+
+@implementation VIEW_CLASS (AmbiguityTests) // Debug only. Do not ship with this code
+- (void) testAmbiguity
+{
+    NSLog(@"<%@:0x%0x>: %@",
+          self.class.description, (int)self, self.hasAmbiguousLayout ? @"Ambiguous" : @"Unambiguous");
+    for (VIEW_CLASS *view in self.subviews) [view testAmbiguity];
+} @end

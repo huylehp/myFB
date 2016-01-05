@@ -12,7 +12,7 @@
 #import "FSVCell.h"
 #import "ImageScrollViewController.h"
 #import "ScrollView.h"
-
+#import "MBProgressHUD.h"
 #define I_OS_7  ([[[UIDevice currentDevice] systemVersion] floatValue] < 8.0)
 
 
@@ -161,11 +161,9 @@
 }
 - (void)addMore{
     if ([self.myFeedManager isFull] == FALSE) {
-        [self.view addSubview:activityIndicator];
-        [activityIndicator startAnimating];
         [self.myFeedManager pagingMoreNewFeedWithPagingString:self.myFeedManager.paging.next withCompletionSuccess:^(NSArray *success) {
             [self.feedArrays addObjectsFromArray:success];
-            
+            [MBProgressHUD hideHUDForView:self.view animated:YES];
             [self performSelector:@selector(reloadTableData) withObject:self afterDelay:1.0];
             //            [self.feedTableView reloadData];
         } failure:^(NSError *failure) {
@@ -247,12 +245,16 @@
             ScrollView *newScrollView = [[ScrollView alloc] init];
             newScrollView.imageToView = [self imageWithImage:f.image scaledToWidth:self.view.bounds.size.width];
 //            newScrollView.imageToView = f.image;
-            imageScrollView.imageToView = [self imageWithImage:f.image scaledToWidth:self.view.bounds.size.width];
+            imageScrollView.imageToView = f.image;
+//            imageScrollView.imageToView = [self imageWithImage:f.image scaledToWidth:self.view.bounds.size.width];
             if (f.message) {
                 imageScrollView.message = f.message;
             }
-            if (newScrollView.imageToView) {
-                [self.navigationController pushViewController:newScrollView animated:YES];
+//            if (newScrollView.imageToView) {
+//                [self.navigationController pushViewController:newScrollView animated:YES];
+//            }
+            if (imageScrollView.imageToView) {
+                [self.navigationController pushViewController:imageScrollView animated:YES];
             }
         }
     } else {
@@ -261,27 +263,37 @@
 //        [self addMore];
     }
 }
-#ifdef I_OS_7
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    static NSString *cellIdentifier = @"FSVCell";
-    FSVCell *cell = (FSVCell *)[offScreenCell objectForKey:cellIdentifier];
-    if (cell == nil) {
-        cell = [[FSVCell alloc] init];
-        [offScreenCell setObject:cell forKey:cellIdentifier];
-    }
-    Feed *f = (Feed *)[self.feedArrays objectAtIndex:indexPath.row];
-    if (f != nil) {
-        [cell setUpCellWithFeed:f andUser:self.myUser withTableView:tableView andIndexPath:indexPath];
-    }
-    
-    // Get the actual height required for the cell
-    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
-    return height;
-}
-
-
-#endif
+//#ifdef I_OS_7
+//- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    static NSString *cellIdentifier = @"FSVCell";
+//    FSVCell *cell = (FSVCell *)[offScreenCell objectForKey:cellIdentifier];
+//    if (cell == nil) {
+//        cell = [[FSVCell alloc] init];
+//        [offScreenCell setObject:cell forKey:cellIdentifier];
+//    }
+//    Feed *f = (Feed *)[self.feedArrays objectAtIndex:indexPath.row];
+//    if (f != nil) {
+//        [cell setUpCellWithFeed:f andUser:self.myUser withTableView:tableView andIndexPath:indexPath];
+//    }
+//    
+//    // Get the actual height required for the cell
+//    CGFloat height = [cell.contentView systemLayoutSizeFittingSize:UILayoutFittingCompressedSize].height;
+//    return height;
+//}
+//
+//
+//#endif
+//- (void) tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+//{
+//    NSInteger lastRow = [tableView numberOfRowsInSection:0] - 1;
+//    if ([indexPath row] == lastRow) {
+//        if (self.myFeedManager.isFull == FALSE) {
+//            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+//            [self performSelector:@selector(addMore) withObject:nil afterDelay:1.5];
+//        }
+//    }
+//}
 #pragma mark - SecondViewController delegate
 
 - (void)delegateMethod:(NSString *)message{
@@ -317,8 +329,26 @@
 - (void)scrollViewDidEndDecelerating:(UIScrollView *)scrollView
 {
     float endScrolling = scrollView.contentOffset.y + scrollView.frame.size.height;
-    if (endScrolling >= scrollView.contentSize.height) {
-        [self addMore];
+    if (endScrolling > scrollView.contentSize.height) {
+        if (self.myFeedManager.isFull == FALSE) {
+//            _feedTableView.scrollEnabled = NO;
+//            [self.view addSubview:activityIndicator];
+//            [activityIndicator startAnimating];
+//            [self performSelector:@selector(addMore) withObject:nil afterDelay:1.5];
+//            _feedTableView.scrollEnabled = YES;
+            [MBProgressHUD showHUDAddedTo:self.view animated:YES];
+            [self performSelector:@selector(addMore) withObject:nil afterDelay:1.5];
+//            dispatch_async(dispatch_get_global_queue( DISPATCH_QUEUE_PRIORITY_LOW, 0), ^{
+//                // Do something...
+//                [self addMore];
+//                NSLog(@"AddMore");
+//                dispatch_async(dispatch_get_main_queue(), ^{
+//                    [MBProgressHUD hideHUDForView:self.view animated:YES];
+//                });
+//            });
+
+//            [self addMore];
+        }
     }
 }
 #pragma mark - Navigation button action

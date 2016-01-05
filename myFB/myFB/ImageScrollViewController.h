@@ -11,9 +11,8 @@
 @interface ImageScrollViewController : UIViewController<UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
-- (IBAction)backButton:(id)sender;
 @property (strong, nonatomic) IBOutlet UINavigationBar *messageNav;
-@property (strong, nonatomic) IBOutlet UIImageView *imageView;
+@property (strong, nonatomic) UIImageView *imageView;
 @property (strong, nonatomic) UIImage *imageToView;
 @property (strong, nonatomic) NSString *message;
 @end

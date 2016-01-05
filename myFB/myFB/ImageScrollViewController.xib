@@ -1,13 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ImageScrollViewController">
             <connections>
-                <outlet property="imageView" destination="ZyM-ZH-AkD" id="luU-lo-ubJ"/>
                 <outlet property="scrollView" destination="If4-ys-KP5" id="a1S-Ku-aLC"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -19,31 +18,6 @@
             <subviews>
                 <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" indicatorStyle="black" translatesAutoresizingMaskIntoConstraints="NO" id="If4-ys-KP5">
                     <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                    <subviews>
-                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uIX-4e-2ej">
-                            <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                            <subviews>
-                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZyM-ZH-AkD">
-                                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
-                                </imageView>
-                            </subviews>
-                            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            <constraints>
-                                <constraint firstItem="ZyM-ZH-AkD" firstAttribute="leading" secondItem="uIX-4e-2ej" secondAttribute="leading" id="Sdt-h6-iRh"/>
-                                <constraint firstAttribute="trailing" secondItem="ZyM-ZH-AkD" secondAttribute="trailing" id="pWe-hX-ihx"/>
-                                <constraint firstAttribute="bottom" secondItem="ZyM-ZH-AkD" secondAttribute="bottom" id="yOz-Db-EuW"/>
-                                <constraint firstItem="ZyM-ZH-AkD" firstAttribute="top" secondItem="uIX-4e-2ej" secondAttribute="top" id="ysE-gu-byq"/>
-                            </constraints>
-                        </view>
-                    </subviews>
-                    <constraints>
-                        <constraint firstAttribute="trailing" secondItem="uIX-4e-2ej" secondAttribute="trailing" constant="24" id="5HR-1f-8qq"/>
-                        <constraint firstAttribute="bottom" secondItem="uIX-4e-2ej" secondAttribute="bottom" constant="284" id="AFj-Aa-MkY"/>
-                        <constraint firstItem="uIX-4e-2ej" firstAttribute="leading" secondItem="If4-ys-KP5" secondAttribute="leading" id="YAG-Ch-Y5t"/>
-                        <constraint firstItem="uIX-4e-2ej" firstAttribute="height" secondItem="If4-ys-KP5" secondAttribute="height" id="mhb-bd-yl6"/>
-                        <constraint firstItem="uIX-4e-2ej" firstAttribute="width" secondItem="If4-ys-KP5" secondAttribute="width" id="qgm-uB-viz"/>
-                        <constraint firstItem="uIX-4e-2ej" firstAttribute="top" secondItem="If4-ys-KP5" secondAttribute="top" id="xEd-hU-5JA"/>
-                    </constraints>
                     <connections>
                         <outlet property="delegate" destination="-1" id="3S1-rw-9m4"/>
                     </connections>

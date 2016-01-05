@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5103F83A1C3A7A110092C414 /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 5103F8391C3A7A110092C414 /* MBProgressHUD.m */; };
 		511FD6761C03FEEC00696977 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 511FD6751C03FEEC00696977 /* Security.framework */; };
 		511FD6FA1C05A25400696977 /* picture-3-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6F91C05A25400696977 /* picture-3-24.png */; };
 		511FD6FC1C05A2BB00696977 /* pages-2-24.png in Resources */ = {isa = PBXBuildFile; fileRef = 511FD6FB1C05A2BB00696977 /* pages-2-24.png */; };
@@ -42,6 +43,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5103F8381C3A7A110092C414 /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		5103F8391C3A7A110092C414 /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
 		5108F9FC1BFEF65000B476C6 /* User.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = User.h; sourceTree = "<group>"; };
 		5108F9FD1BFEF65000B476C6 /* User.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		511FD6751C03FEEC00696977 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
@@ -207,6 +210,8 @@
 				51D0C6DC1C19304500FE3D9F /* FirstSubViewController.h */,
 				51D0C6DD1C19304500FE3D9F /* FirstSubViewController.m */,
 				51D0C6DE1C19304500FE3D9F /* FirstSubViewController.xib */,
+				5103F8381C3A7A110092C414 /* MBProgressHUD.h */,
+				5103F8391C3A7A110092C414 /* MBProgressHUD.m */,
 				51A79FF01C3382F1005CEB69 /* ScrollView.h */,
 				51A79FF11C3382F1005CEB69 /* ScrollView.m */,
 				518A42721C1E7D8F00523C92 /* ImageScrollViewController.h */,
@@ -307,6 +312,7 @@
 				51A030061C0C4485006197A5 /* Paging.m in Sources */,
 				51A030091C0C4485006197A5 /* SecondViewController.m in Sources */,
 				51A0300B1C0C4485006197A5 /* ViewController.m in Sources */,
+				5103F83A1C3A7A110092C414 /* MBProgressHUD.m in Sources */,
 				51D0C6E61C19728000FE3D9F /* FSVCell.m in Sources */,
 				5172EC2E1C101E0100594320 /* UploadManager.m in Sources */,
 				51A030021C0C4463006197A5 /* User.m in Sources */,
