@@ -49,6 +49,7 @@
 #pragma mark - viewAdjust
 - (void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    [self.tabBarController.tabBar setHidden:NO];
      NSLog(@"Selected:%d", self.tabBarController.selectedIndex);
 }
 - (void)viewDidLoad {
@@ -83,16 +84,6 @@
 #pragma mark - Action of table
 - (void) actionInFirstView{
     NSLog(@"Reloading");
-    activityIndicator = [[UIActivityIndicatorView alloc] initWithActivityIndicatorStyle:UIActivityIndicatorViewStyleGray];
-    activityIndicator.alpha = 1.0;
-    activityIndicator.center = self.view.center;
-    activityIndicator.color = [UIColor yellowColor];
-    activityIndicator.backgroundColor = [UIColor colorWithWhite:0.2 alpha:0.4];
-    activityIndicator.layer.cornerRadius = 10;
-    CGRect f = activityIndicator.bounds;
-    f.size.width += 10;
-    f.size.height += 10;
-    activityIndicator.bounds = f;
 //    activityIndicator.hidesWhenStopped = NO;
 //    [self.view addSubview:activityIndicator];
 //    [activityIndicator startAnimating];

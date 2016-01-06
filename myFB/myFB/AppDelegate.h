@@ -18,6 +18,7 @@
 @property (strong, nonatomic) FirstSubViewController *firstSubViewController;
 @property (strong, nonatomic) UIWindow *window;
 
+@property (strong, nonatomic) UINavigationController *secondNav;
 @property (strong, nonatomic) UINavigationController *navigationController;
 @property (strong, nonatomic) LoginViewController *loginViewController;
 

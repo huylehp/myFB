@@ -18,18 +18,16 @@
 @end
 
 @interface SecondViewController : UIViewController<UITextViewDelegate,UIImagePickerControllerDelegate, UINavigationControllerDelegate, UploadManagerDelegate>
+@property (strong, nonatomic) IBOutlet UIButton *goPhotoButton;
+@property (strong, nonatomic) IBOutlet UIImageView *showImage;
 
+@property (strong, nonatomic) IBOutlet UIImageView *avaImageView;
 @property (weak, nonatomic) IBOutlet UITextView *messageTextView;
-@property (weak, nonatomic) IBOutlet UIButton *statusButton;
-@property (weak, nonatomic) IBOutlet UIButton *photoButton;
 @property (weak, nonatomic) NSMutableArray *photoArrays;
 @property (weak, nonatomic) NSMutableArray *thumbArrays;
 @property (nonatomic) BOOL isDone;
 @property (nonatomic, weak) id <SecondVCDelegate> delegate;
 
-- (IBAction)postClicked:(id)sender;
-- (IBAction)photoClicked:(id)sender;
 - (IBAction)takePicture:(id)sender;
 - (IBAction)goToAlbum:(id)sender;
-
 @end

@@ -1,16 +1,17 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="9531" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SecondViewController">
             <connections>
+                <outlet property="avaImageView" destination="54a-Ac-AdD" id="13k-ok-zoU"/>
+                <outlet property="goPhotoButton" destination="qXH-eL-8bs" id="s2z-rr-ubf"/>
                 <outlet property="messageTextView" destination="JGO-7X-rdi" id="LmZ-BF-XJ3"/>
-                <outlet property="photoButton" destination="ssE-b2-yxl" id="kdP-tL-kNw"/>
-                <outlet property="statusButton" destination="Go6-hX-jdQ" id="8sD-my-jfJ"/>
+                <outlet property="showImage" destination="yfo-Zd-U9l" id="6ef-QZ-1v8"/>
                 <outlet property="view" destination="iN0-l3-epB" id="utZ-5F-HHh"/>
             </connections>
         </placeholder>
@@ -19,9 +20,16 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXH-eL-8bs">
+                    <rect key="frame" x="0.0" y="176" width="160" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                    <state key="normal" title="GoAlbum"/>
+                    <connections>
+                        <action selector="goToAlbum:" destination="-1" eventType="touchUpInside" id="Lha-AX-8QI"/>
+                    </connections>
+                </button>
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="What's on your mind?" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JGO-7X-rdi">
-                    <rect key="frame" x="8" y="48" width="304" height="96"/>
-                    <color key="backgroundColor" red="0.90196079015731812" green="0.90196079015731812" blue="0.90196079015731812" alpha="1" colorSpace="calibratedRGB"/>
+                    <rect key="frame" x="68" y="72" width="252" height="96"/>
                     <color key="textColor" red="0.80000001192092896" green="0.80000001192092896" blue="0.80000001192092896" alpha="1" colorSpace="calibratedRGB"/>
                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -29,64 +37,53 @@
                         <outlet property="delegate" destination="-1" id="RKo-t8-2EZ"/>
                     </connections>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Go6-hX-jdQ">
-                    <rect key="frame" x="8" y="149" width="157" height="30"/>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="54a-Ac-AdD">
+                    <rect key="frame" x="10" y="72" width="50" height="50"/>
                     <constraints>
-                        <constraint firstAttribute="height" constant="30" id="NDe-qY-6U2"/>
-                        <constraint firstAttribute="width" constant="157" id="tqs-Rr-Xqc"/>
+                        <constraint firstAttribute="width" constant="50" id="wSL-lc-6iN"/>
+                        <constraint firstAttribute="height" constant="50" id="yLv-l6-9Hu"/>
                     </constraints>
-                    <state key="normal" title="Post"/>
-                    <connections>
-                        <action selector="postClicked:" destination="-1" eventType="touchUpInside" id="Lbo-qF-ZNT"/>
-                    </connections>
-                </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ssE-b2-yxl">
-                    <rect key="frame" x="165" y="149" width="147" height="30"/>
-                    <constraints>
-                        <constraint firstAttribute="height" constant="30" id="mfi-r0-fFS"/>
-                    </constraints>
-                    <state key="normal" title="Add Photo"/>
-                    <connections>
-                        <action selector="photoClicked:" destination="-1" eventType="touchUpInside" id="kvJ-TO-0Ns"/>
-                    </connections>
-                </button>
+                </imageView>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tv9-xu-RY1">
-                    <rect key="frame" x="165" y="179" width="147" height="30"/>
+                    <rect key="frame" x="160" y="176" width="160" height="30"/>
                     <state key="normal" title="TakePicture"/>
                     <connections>
                         <action selector="takePicture:" destination="-1" eventType="touchUpInside" id="NZL-CF-1FD"/>
                     </connections>
                 </button>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qXH-eL-8bs">
-                    <rect key="frame" x="8" y="179" width="157" height="30"/>
-                    <state key="normal" title="GoAlbum"/>
-                    <connections>
-                        <action selector="goToAlbum:" destination="-1" eventType="touchUpInside" id="Lha-AX-8QI"/>
-                    </connections>
-                </button>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yfo-Zd-U9l">
+                    <rect key="frame" x="0.0" y="214" width="320" height="266"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
-                <constraint firstItem="tv9-xu-RY1" firstAttribute="leading" secondItem="ssE-b2-yxl" secondAttribute="leading" id="3zU-9m-9wt"/>
-                <constraint firstItem="Go6-hX-jdQ" firstAttribute="top" secondItem="JGO-7X-rdi" secondAttribute="bottom" constant="5" id="4c5-Z7-MRL"/>
-                <constraint firstItem="tv9-xu-RY1" firstAttribute="height" secondItem="ssE-b2-yxl" secondAttribute="height" id="BXI-4f-AOX"/>
-                <constraint firstItem="tv9-xu-RY1" firstAttribute="top" secondItem="ssE-b2-yxl" secondAttribute="bottom" id="CQy-vQ-gEF"/>
-                <constraint firstItem="qXH-eL-8bs" firstAttribute="top" secondItem="Go6-hX-jdQ" secondAttribute="bottom" id="E0V-At-zWF"/>
-                <constraint firstItem="Go6-hX-jdQ" firstAttribute="leading" secondItem="JGO-7X-rdi" secondAttribute="leading" id="KdY-eK-odl"/>
-                <constraint firstItem="JGO-7X-rdi" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="8" id="Lfj-mW-Lqn"/>
-                <constraint firstItem="ssE-b2-yxl" firstAttribute="leading" secondItem="Go6-hX-jdQ" secondAttribute="trailing" id="R7k-vH-fCz"/>
-                <constraint firstAttribute="trailing" secondItem="ssE-b2-yxl" secondAttribute="trailing" constant="8" id="SFk-an-2TS"/>
+                <constraint firstItem="qXH-eL-8bs" firstAttribute="top" secondItem="JGO-7X-rdi" secondAttribute="bottom" constant="8" id="2Gu-Qs-tWf"/>
+                <constraint firstItem="yfo-Zd-U9l" firstAttribute="top" secondItem="qXH-eL-8bs" secondAttribute="bottom" constant="8" id="50I-ez-47P"/>
+                <constraint firstItem="tv9-xu-RY1" firstAttribute="top" secondItem="qXH-eL-8bs" secondAttribute="top" id="EhX-fE-CnX"/>
+                <constraint firstItem="54a-Ac-AdD" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="0.15" id="PeF-qe-Lhl"/>
+                <constraint firstItem="qXH-eL-8bs" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="UhQ-3Z-hkP"/>
+                <constraint firstItem="yfo-Zd-U9l" firstAttribute="top" secondItem="qXH-eL-8bs" secondAttribute="bottom" constant="8" id="Yw6-9T-DMa"/>
                 <constraint firstItem="JGO-7X-rdi" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="0.2" id="atI-Ar-qLm"/>
-                <constraint firstItem="tv9-xu-RY1" firstAttribute="trailing" secondItem="ssE-b2-yxl" secondAttribute="trailing" id="hxV-Lm-qxc"/>
-                <constraint firstItem="qXH-eL-8bs" firstAttribute="trailing" secondItem="Go6-hX-jdQ" secondAttribute="trailing" id="ioL-ra-iW9"/>
-                <constraint firstAttribute="trailing" secondItem="JGO-7X-rdi" secondAttribute="trailing" constant="8" id="j20-qR-oEn"/>
-                <constraint firstItem="qXH-eL-8bs" firstAttribute="leading" secondItem="Go6-hX-jdQ" secondAttribute="leading" id="ore-LM-wx3"/>
-                <constraint firstItem="ssE-b2-yxl" firstAttribute="top" secondItem="JGO-7X-rdi" secondAttribute="bottom" constant="5" id="uj3-W1-KKA"/>
-                <constraint firstItem="qXH-eL-8bs" firstAttribute="height" secondItem="Go6-hX-jdQ" secondAttribute="height" id="xWa-zc-ANi"/>
-                <constraint firstItem="JGO-7X-rdi" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="bottom" multiplier="0.1" id="xcb-jG-beG"/>
+                <constraint firstItem="qXH-eL-8bs" firstAttribute="width" secondItem="iN0-l3-epB" secondAttribute="width" multiplier="0.5" id="ft3-oW-lOO"/>
+                <constraint firstItem="tv9-xu-RY1" firstAttribute="leading" secondItem="qXH-eL-8bs" secondAttribute="trailing" id="h2d-ww-jSI"/>
+                <constraint firstItem="yfo-Zd-U9l" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="hpO-pV-gNs"/>
+                <constraint firstItem="yfo-Zd-U9l" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="249" id="ixo-4b-Vnq"/>
+                <constraint firstAttribute="trailing" secondItem="JGO-7X-rdi" secondAttribute="trailing" id="j20-qR-oEn"/>
+                <constraint firstAttribute="bottom" secondItem="yfo-Zd-U9l" secondAttribute="bottom" id="k9i-3w-dUj"/>
+                <constraint firstAttribute="trailing" secondItem="yfo-Zd-U9l" secondAttribute="trailing" id="kRN-WS-BPh"/>
+                <constraint firstItem="54a-Ac-AdD" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="10" id="mKY-AT-OQS"/>
+                <constraint firstItem="tv9-xu-RY1" firstAttribute="width" secondItem="qXH-eL-8bs" secondAttribute="width" id="um7-ou-PcV"/>
+                <constraint firstItem="JGO-7X-rdi" firstAttribute="leading" secondItem="54a-Ac-AdD" secondAttribute="trailing" constant="8" id="vHr-iF-5sO"/>
+                <constraint firstItem="JGO-7X-rdi" firstAttribute="top" secondItem="54a-Ac-AdD" secondAttribute="top" id="weC-r4-U3q"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-            <point key="canvasLocation" x="160" y="269"/>
+            <variation key="default">
+                <mask key="constraints">
+                    <exclude reference="50I-ez-47P"/>
+                    <exclude reference="ixo-4b-Vnq"/>
+                </mask>
+            </variation>
+            <point key="canvasLocation" x="172" y="246"/>
         </view>
     </objects>
 </document>
